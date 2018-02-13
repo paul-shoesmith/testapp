@@ -4,8 +4,12 @@ var app = express();
 var server_port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var server_ip_address = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
+var route = express.Router();
+
+app.use('', route);
+
 app.get('/', function(req,res){
-    res.end('Hello World!!');
+    res.send('Hello World!!');
 });
 
 app.listen(server_port, server_ip_address, function(){
