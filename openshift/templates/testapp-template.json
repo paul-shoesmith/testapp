@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "testapp",
+    "name": "testapp1",
     "annotations": {
       "openshift.io/display-name": "Node.js",
       "description": "This is the testapp template.",
@@ -15,7 +15,7 @@
   },
   "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\n",
   "labels": {
-    "template": "testapp"
+    "template": "testapp1"
   },
   "objects": [
     {
@@ -150,7 +150,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "testapp"
+                "testapp1"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -176,7 +176,7 @@
           "spec": {
             "containers": [
               {
-                "name": "testapp",
+                "name": "testapp1",
                 "image": " ",
                 "ports": [
                   {
@@ -217,7 +217,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "testapp"
+      "value": "testapp1"
     },
     {
       "name": "NAMESPACE",
@@ -238,7 +238,7 @@
       "displayName": "Git Repository URL",
       "description": "The URL of the repository with your application source code.",
       "required": true,
-      "value": "https://github.com/paul-shoesmith/testapp.git"
+      "value": "https://github.com/paul-shoesmith/git.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
